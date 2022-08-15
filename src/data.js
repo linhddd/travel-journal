@@ -1,4 +1,4 @@
-export default [
+const places = [
     {
         id: 1,
         title: "Mount Fuji",
@@ -30,3 +30,16 @@ export default [
         imageUrl: "https://source.unsplash.com/3PeSjpLVtLg"
     }
 ]
+
+const placesByIds = places.reduce((acc, place) => {
+    const id = place.id;
+    acc[id] = place;
+
+    return acc;
+}, {});
+
+export const getPlace = (id) => {
+    return placesByIds[id];
+};
+
+export default places;

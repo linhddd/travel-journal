@@ -1,8 +1,14 @@
+import { getStore } from './store';
+
 export default function Top() {
-    return (
-        <div className="top">
-            <img src="./logo.png"/>
-            <h2>my travel journal</h2>
-        </div>
-    )
+  const store = getStore();
+
+  return (
+    <header>
+      <div className='top'>
+        <img src='/logo.svg' />
+        <h2>my travel journal {store.name}</h2>
+      </div>
+    </header>
+  );
 }

@@ -1,23 +1,12 @@
 import './App.css';
-import Top from "./Top"
-import Card from "./Card"
-import data from "./data"
+import { Cards } from './Cards';
+import Top from './Top';
 
 function App() {
-  const cards = data.map(item => {
-    return (
-      <Card 
-        key={item.id}
-        item={item}
-      />
-    )
-  })
   return (
-    <div className="App">
-      <header>
-        <Top />
-      </header>
-      {cards}
+    <div className='App'>
+      <Top />
+      <Cards />
     </div>
   );
 }
