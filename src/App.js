@@ -14,9 +14,7 @@ function App() {
   })
   return (
     <div className="App">
-      <header>
-        <Top />
-      </header>
+      <Top />
       {cards}
     </div>
   );
